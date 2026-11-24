@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#231a24">
+  <meta name="description" content="Decorate the fir, keep it upright, and chase your personal best in Christmas Tree Panic!">
+  <title>Christmas Tree Panic!</title>
+  <script type="module" crossorigin src="./index-DnY5zbGm.js"></script>
+  <link rel="stylesheet" crossorigin href="./index-BkaPU1Lh.css">
+</head>
+<body>
+  <main id="stage" aria-label="Christmas Tree Panic arcade game">
+    <div id="canvas"></div>
+    <div class="frame" aria-hidden="true"></div>
+    <section id="menu" class="menu" aria-labelledby="game-title">
+      <div class="flourish" aria-hidden="true"><i></i><b>✦</b><i></i></div>
+      <h1 id="game-title">Christmas<br>Tree <em>Panic!</em></h1>
+      <p>Drag ornaments onto the branches. Bigger decorations earn more points and can tip the tree. Keep it standing for 60 seconds to earn bonuses.</p>
+      <button id="play" disabled class="action" type="button">Play <span aria-hidden="true">▶</span></button>
+      <p id="menu-best" class="record" hidden></p>
+    </section>
+    <section id="hud" class="hud" aria-label="Round status" hidden>
+      <div class="brand" aria-hidden="true"><b>✦</b> Christmas Tree <em>Panic!</em></div>
+      <div class="meters">
+        <div class="meter"><span>Time left</span><strong id="time" role="timer">01:00</strong></div>
+        <div class="meter"><span>Base score</span><strong id="score">0</strong></div>
+        <div class="meter risk" id="risk-meter" data-stage="stable">
+          <span>Collapse risk</span><strong id="risk">0%</strong>
+          <div class="risk-track" aria-hidden="true"><i id="risk-fill"></i></div>
+        </div>
+      </div>
+    </section>
+    <div id="box-label" class="box-label" hidden>Ornament box</div>
+    <div id="notice" class="notice" role="status" hidden></div>
+    <section id="results" class="results" aria-labelledby="ending" hidden>
+      <div class="result-card">
+        <div id="ending-symbol" class="result-symbol" aria-hidden="true">✦</div>
+        <h2 id="ending"></h2>
+        <div class="total"><strong id="final-score"></strong><span>Final score</span></div>
+        <dl class="breakdown">
+          <div><dt>Base score</dt><dd id="final-base"></dd></div>
+          <div><dt>Set bonus</dt><dd id="final-sets"></dd></div>
+          <div><dt>Distribution bonus</dt><dd id="final-distribution"></dd></div>
+          <div><dt>Survival bonus</dt><dd id="final-survival"></dd></div>
+          <div><dt>Ornaments placed</dt><dd id="final-placed"></dd></div>
+          <div><dt>Time left</dt><dd id="final-time"></dd></div>
+        </dl>
+        <p id="final-best" class="record"></p>
+        <button id="replay" class="action" type="button">Play again <span aria-hidden="true">▶</span></button>
+      </div>
+    </section>
+    <button id="sound" class="sound" type="button" aria-label="Toggle sound" aria-pressed="true"><span aria-hidden="true">♫</span> Sound <strong>on</strong></button>
+    <details id="debug" class="debug" hidden><summary>Balance debug</summary><pre id="debug-values"></pre><pre id="debug-config"></pre></details>
+  </main>
+</body>
+</html>
